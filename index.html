@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="content">
+      <div id="top-panel">
+        <div class="panel">
+          <div class="panel-label">time</div>
+          <div id="time-content">
+            <h1 id="clock"></h1>
+            <span id="date"></span>
+          </div>
+        </div>
+        <div class="panel">
+          <div id="ascii-title" class="panel-label"></div>
+          <div id="ascii-content"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-label">search</div>
+        <div id="search-bar">
+          <label for="search-input" id="lambda">~ λ</label>
+          <input id="search-input" type="text" value="" placeholder="" autocomplete="off"/>
+          <span id="search-text"></span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-label">bookmarks</div>
+        <div id="bookmark-content"></div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>

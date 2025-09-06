@@ -1,0 +1,128 @@
+:root {
+  --bg-1: oklch(19% 0 0);
+  --bg-2: oklch(23% 0 0);
+  --bg-3: oklch(27% 0 0);
+  --txt-4: oklch(40% 0 0);
+  --txt-3: oklch(50% 0 0);
+  --txt-2: oklch(75% 0 0);
+  --txt-1: oklch(90% 0 0);
+  --txt-err: oklch(70% 0.11 0);
+}
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Textar";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Textar"),
+  url("textar-light.woff2") format("woff2"),
+  url("textar-light.woff") format("woff"),
+  url("textar-light.ttf") format("ttf");
+}
+
+/* https://marmooo.blogspot.com/2020/08/2chaaoscss.html */
+pre.aa, textarea.aa {
+  font-size: 1em;
+  line-height: 1.1;
+  font-family: 'ＭＳ Ｐゴシック','MS PGothic','梅Pゴシック',Textar,sans-serif;
+  white-space: pre;
+  word-wrap: normal;
+}
+span.aa {
+  font-size: 7pt;
+  font-family: monospace;
+  white-space: pre;
+}
+
+body {
+  background: var(--bg-1);
+  color: var(--txt-2);
+  height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+#content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
+  gap: 20px;
+}
+#top-panel {
+  display:flex;
+  min-width: 50vw;
+  gap: 20px;
+}
+#time-content {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+height: 90%;
+}
+#ascii-content {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#bookmark-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#search-bar {
+  background-color: var(--bg-1);
+  display: flex;
+  justify-content: space-between;
+}
+#search-input {
+  display: inline-block;
+  background-color: var(--bg-1);
+  border: 0px solid;
+  color: inherit;
+  width: auto;
+  flex-grow: 1;
+  font-size: 11pt;
+}
+#search-input:focus {
+  outline: none;
+}
+#search-text {
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  font-size: 11pt;
+  margin-top: 1px;
+  color: var(--txt-3);
+}
+#lambda {
+  display: inline-block;
+  font-size: 11pt;
+  margin-right: 11px;
+  margin-top: 1px;
+}
+
+.panel {
+  padding: 1.5rem;
+  border: 2px solid var(--bg-3);
+  position: relative;
+  max-width: 50vw;
+  width: 100%;
+}
+.panel-label {
+  position: absolute;
+  top: -14px;
+  left: 8px;
+  background-color: var(--bg-1);
+  color: var(--txt-4);
+  padding: 0 4px;
+  z-index: 10;
+}
