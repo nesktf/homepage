@@ -31,7 +31,7 @@ pre.aa, textarea.aa {
   word-wrap: normal;
 }
 span.aa {
-  font-size: 7pt;
+  font-size: 1em;
   font-family: monospace;
   white-space: pre;
 }
