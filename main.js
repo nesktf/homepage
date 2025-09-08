@@ -6,14 +6,19 @@ const book_cont = document.getElementById('bookmark-content');
 const search_input = document.getElementById('search-input');
 const search_text = document.getElementById('search-text');
 
+const getRandomAscii = () => { return ASCII_ARRAY[Math.floor(Math.random()*ASCII_ARRAY.length)]; };
+
 const setAscii = () => {
-  let idx = Math.floor(Math.random()*ASCII_ARRAY.length);
-  let choice = ASCII_ARRAY[idx];
-  ascii_title.innerHTML = choice.name;
-  if (choice.type == ASCII_BASIC) {
-    ascii_content.innerHTML = `<span class="aa">${choice.text}</span>`;
-  } else if (choice.type == ASCII_2CH) {
-    let parsed_aa = choice.text.replaceAll('>', "&gt;").replaceAll('<', "&lt;");
+  let ascii = getRandomAscii();
+  if (!CONFIG.enable_lewd && ascii.lewd) {
+    console.log(`Lewd skipped: ${ascii.name}`);
+    return setAscii(); // loop until a non lewd one is chosen
+  }
+  ascii_title.innerHTML = ascii.name;
+  if (ascii.type == ASCII_BASIC) {
+    ascii_content.innerHTML = `<span class="aa">${ascii.text}</span>`;
+  } else if (ascii.type == ASCII_2CH) {
+    let parsed_aa = ascii.text.replaceAll('>', "&gt;").replaceAll('<', "&lt;");
     ascii_content.innerHTML = `<pre class="aa">${parsed_aa}</pre>`
   }
 };
