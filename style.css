@@ -17,9 +17,9 @@
   font-style: normal;
   font-weight: normal;
   src: local("Textar"),
-  url("textar-light.woff2") format("woff2"),
-  url("textar-light.woff") format("woff"),
-  url("textar-light.ttf") format("ttf");
+  url("res/textar-light.woff2") format("woff2"),
+  url("res/textar-light.woff") format("woff"),
+  url("res/textar-light.ttf") format("ttf");
 }
 
 /* https://marmooo.blogspot.com/2020/08/2chaaoscss.html */
