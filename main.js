@@ -81,7 +81,7 @@ const parseQuery = (raw_query) => {
   if (COMMANDS.has(path_key)) {
     const cmd = COMMANDS.get(path_key);
     let pathed_path = path.replaceAll(" ", "/");
-    const url = `${new URL(cmd.url).origin}/${pathed_path}`;
+    const url = `${new URL(cmd.url)}/${pathed_path}`.replaceAll("//", "/");
     return {url, query: pathed_path, name: cmd.name};
   }
 

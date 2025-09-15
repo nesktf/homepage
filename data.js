@@ -5,7 +5,7 @@ const CONFIG = {
   cmd_path: "/",
   cmd_search: ":",
   def_search: "dd",
-  enable_lewd: true,
+  enable_lewd: false,
 }
 
 const SITES = [
@@ -44,6 +44,12 @@ const SITES = [
     hide: true,
   },
   {
+    name: "4chins",
+    url: "https://boards.4chan.org",
+    cmd: "4ch",
+    hide: true,
+  },
+  {
     name: "/v/",
     url: "https://8chan.moe/v/catalog.html",
     cmd: "8v",
@@ -68,6 +74,7 @@ const SITES = [
   {
     name: "github repos",
     url: "https://github.com/nesktf",
+    templ: "?tab=repositories&q={}",
     cmd: "gir",
   },
   {
