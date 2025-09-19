@@ -125,26 +125,54 @@ const SITES = [
     hide: true,
   },
   {
-    name: "Bing Images",
+    name: "bing images",
     templ: "/images/search?q={}",
     url: "https://www.bing.com",
     cmd: "bi",
     hide: true,
   },
   {
-    name: "Yandex",
+    name: "yandex",
     templ: "/search/?text={}",
     url: "https://yandex.com",
     cmd: "ya",
     hide: true,
   },
   {
-    name: "Yandex Images",
+    name: "yandex images",
     templ: "/images/search/?text={}",
     url: "https://yandex.com",
     cmd: "yai",
     hide: true,
   },
+  {
+    name: "spriters resource",
+    templ: "/browse/assets/?name={}",
+    url: "https://www.spriters-resource.com",
+    cmd: "spr",
+    hide: true,
+  },
+  {
+    name: "models resource",
+    templ: "/browse/assets/?name={}",
+    url: "https://models.spriters-resource.com",
+    cmd: "mdr",
+    hide: true,
+  },
+  {
+    name: "textures resource",
+    templ: "/browse/assets/?name={}",
+    url: "https://textures.spriters-resource.com",
+    cmd: "txr",
+    hide: true,
+  },
+  {
+    name: "sounds resource",
+    templ: "/browse/assets/?name={}",
+    url: "https://sounds.spriters-resource.com",
+    cmd: "snr",
+    hide: true,
+  }
 ];
 
 const COMMANDS = new Map();
